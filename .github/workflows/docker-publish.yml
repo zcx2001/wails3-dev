@@ -14,6 +14,7 @@ jobs:
       TZ: Asia/Shanghai
       GO_VERSION: "1.27.3"
       NODE_VERSION: "24.22.1"
+      WAILS3_VERSION: "v3.0.0"
 
     steps:
       - name: Checkout repository
@@ -43,6 +44,7 @@ jobs:
           build-args: |
             GO_VERSION=${{ env.GO_VERSION }}
             NODE_VERSION=${{ env.NODE_VERSION }}
+            WAILS3_VERSION=${{ env.WAILS3_VERSION }}
           tags: |
             zcx2001/wails3-dev:${{ steps.date.outputs.today }}
             zcx2001/wails3-dev:latest
