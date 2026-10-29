@@ -5,9 +5,8 @@ FROM node:${NODE_VERSION}
 ENV DEBIAN_FRONTEND=noninteractive
 
 # 修正中文显示
-ENV LANG=en_US.UTF-8
-ENV LANGUAGE=en_US:en
-ENV LC_ALL=en_US.UTF-8
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
 
 # golang设置
 ENV GOPATH=/root/go
@@ -19,7 +18,6 @@ RUN apt-get update && apt-get upgrade -y && \
         pkg-config \
         libgtk-4-dev \ 
         libwebkitgtk-6.0-dev \
-        locales \
         tzdata && \
     locale-gen en_US.UTF-8 && \
     rm -rf /var/lib/apt/lists/*
