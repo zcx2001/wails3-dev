@@ -32,5 +32,5 @@ RUN apt-get update && apt-get upgrade -y && \
     rm -rf /usr/local/go && \
     tar -C /usr/local -xzf /tmp/go.tar.gz && \
     rm -f /tmp/go.tar.gz && \
-    go install github.com/wailsapp/wails/v3/cmd/wails3@${WAILS3_VERSION} &&\
+    go install github.com/wailsapp/wails/v3/cmd/wails3@${WAILS3_VERSION} && \
     rm -rf /var/lib/apt/lists/*
