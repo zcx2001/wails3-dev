@@ -9,6 +9,10 @@ ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US:en
 ENV LC_ALL=en_US.UTF-8
 
+# golang设置
+ENV GOPATH=/root/go
+ENV PATH="${PATH}:/usr/local/go/bin:${GOPATH}/bin"
+
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y --no-install-recommends \
         build-essential \
